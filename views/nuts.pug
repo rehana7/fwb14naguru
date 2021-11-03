@@ -2,28 +2,29 @@ extends layout
 
 block content
   h1= title
-  p Welcome to Nuts
+  p Welcome to the nuts pug
    div(class="container-fluid")
         div(class="row")
+            -
                 let nuts = [
                     {
-                        "Itemname": "Almonds",
+                        "Itemname": "Almond nuts",
                         "Quantity": 5,
                         "price": 100
                     },
                     {
-                        "Itemname": "Pistachios",
-                        "Quantity": 4,
-                        "price": 80
+                        "Itemname": "Cashew nuts",
+                        "Quantity": 7,
+                        "price": 120.00
                     },
                     {
-                        "Itemname": "Cashews",
-                        "Quantity": 2,
-                        "price": 40
+                        "Itemname": "Pistachious nuts",
+                        "Quantity": 5,
+                        "price": 150.87
                     },                   
                 ]
             each v,index in nuts
-                table(style='width:100%', border='2')
+                table(style='width:100%', border='1')
                   tr 
                     div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}
                     br
@@ -33,7 +34,7 @@ block content
                     br
                     div(class="col-sm-2" onclick=`buy(${index})`) #{v.price}
   script.                
-        function buy(item)
+        function buy(intemNo)
         {
-              alert(`Your Pancake is ${item + 1}`)
+              alert(`Your nuts is ${intemNo + 1}`)
         }
