@@ -2,9 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Rehana Naguru wishes you Happy Halloween
-  br
- button(type="button", class="btn btn-success", onclick="update()") Press Me
+  p  Rehana Naguru wishes you Happy Haloween
+
+  button(type="button", class="btn btn-success", onclick="update()") Press Me
   br
   br
   div(id = "target") 
@@ -16,4 +16,3 @@ block content
        client_count++;
        document.getElementById("target").innerHTML=`Value now ${client_count}`;
      }
-
